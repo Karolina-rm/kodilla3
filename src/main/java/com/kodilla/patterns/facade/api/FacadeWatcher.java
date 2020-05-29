@@ -8,7 +8,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-import java.math.BigDecimal;
 
 @Aspect
 @Component
@@ -21,7 +20,7 @@ public class FacadeWatcher {
         LOGGER.info("Class: " + object.getClass().getName() + ", Args: " + order + ", " + userId);
     }
 
-    @Around("execution(*  com.kodilla.patterns.facade.api.OrderFacade.processorOrder(..))")
+    @Around("execution(* com.kodilla.patterns.facade.api.OrderFacade.processOrder(..))")
     public Object measureTime(final ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         Object result;
         try {
