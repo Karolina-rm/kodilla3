@@ -1,6 +1,5 @@
 package com.kodilla.patterns.facade.api;
 
-import com.kodilla.patterns.facade.Order;
 import com.kodilla.patterns.facade.ShopService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
